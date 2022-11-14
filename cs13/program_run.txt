@@ -1,0 +1,20 @@
+Default number of rows used is 1000, enter 1000 below
+Input the number of rows to be used in subset of csv data: 1000
+KMeans
+Score with zero value cluster being assigned benign: 0.18666666666666668
+Score with zero value cluster being assigned malicious: 0.8133333333333334
+Best components value for TruncatedSVD: 450
+Model with best components value: 0.8166666666666667
+TruncatedSVD: power_iteration_normalizer = QR: 0.8166666666666667
+TruncatedSVD: power_iteration_normalizer = LU: 0.8166666666666667
+TruncatedSVD: power_iteration_normalizer = none: 0.2966666666666667
+KMeans: algorithm = elkan: 0.2966666666666667
+Gaussian Mixture
+Best components value for TruncatedSVD: 100
+Model with best components value: 0.7966666666666666
+TruncatedSVD: power_iteration_normalizer = QR: 0.7966666666666666
+TruncatedSVD: power_iteration_normalizer = LU: 0.7966666666666666
+TruncatedSVD: power_iteration_normalizer = none: 0.74
+GaussianMixture: covariance_type = tied: 0.7766666666666666
+GaussianMixture: covariance_type = diag: 0.49666666666666665
+GaussianMixture: covariance_type = spherical: 0.8166666666666667
