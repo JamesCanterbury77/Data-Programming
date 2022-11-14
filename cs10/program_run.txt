@@ -1,0 +1,12 @@
+Input the number of rows to be used in subset of csv data: 1000
+20 Most Important Features:
+['article', 'au', 'b4', 'br', 'browse', 'category_id', 'com_content', 'component', 'de', 'e5', 'e7', 'index', 'itemid', 'link', 'nl', 'option', 'php', 'tmpl', 'view', 'www']
+Model Types:
+['KNeighborsClassifier', 'LogisticRegression', 'SVC', 'DecisionTreeClassifier', 'RandomForestClassifier']
+Best cross validation scores from each of the five model types
+[0.8871428571428572, 0.9071428571428571, 0.9285714285714286, 0.8871428571428572, 0.832857142857143]
+Model type with best cross validation score: SVC
+Highest cross validation score for SVC is: 0.9285714285714286
+SVC parameters used to get best results:
+{'svc__kernel': 'sigmoid', 'svc__random_state': 0}
+Test set accuracy for SVC is: 0.9133333333333333

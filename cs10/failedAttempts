@@ -1,0 +1,43 @@
+'''
+    model = make_pipeline(TfidfVectorizer(), GaussianNB())
+
+    param_grid = {
+
+    }
+    GNB_cv = GridSearchCV(estimator=model, param_grid=param_grid, cv=5)
+    GNB_cv.fit(X1, y1)
+    GNB_p = GNB_cv.best_params_
+    GNB_e = GNB_cv.best_estimator_
+    params.append(GNB_p)
+    GNB_pred = GNB_e.predict(X2)
+    scores.append(accuracy_score(y2, GNB_pred))
+'''
+
+'''
+    #get the best features
+
+    # Create a random forest classifier
+    clf = RandomForestClassifier(n_estimators=10000, random_state=0, n_jobs=-1)
+
+    # Train the classifier
+    clf.fit(X1, y1)
+
+    # Print the name and gini importance of each feature
+    for feature in zip(feat_labels, clf.feature_importances_):
+        print(feature)
+
+
+    model = make_pipeline(TfidfVectorizer(), SelectKBest(score_func=chi2, k=20), LogisticRegression())
+
+    param_grid = {
+        'logisticregression__random_state': [0],
+        'logisticregression__penalty': ['l2', 'none']
+    }
+    LR_cv = GridSearchCV(estimator=model, param_grid=param_grid, cv=5)
+    LR_cv.fit(X1, y1)
+    LR_p = LR_cv.best_params_
+    LR_e = LR_cv.best_estimator_
+    params.append(LR_p)
+    LR_pred = LR_e.predict(X2)
+    scores.append(accuracy_score(y2, LR_pred))
+'''
