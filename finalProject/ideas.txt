@@ -1,1 +1,16 @@
-ideas
+Password Tester - https://www.projectpro.io/article/cybersecurity-machine-learning-projects/631
+
+This is one of the unique machine learning projects in cybersecurity.
+For this project, you can create a cyber security project to evaluate the strength
+of your credentials per the OWASP (Open Web Application Security Project) guidelines.
+Use datasets of weak passwords, previously leaked passwords, etc., as input for the system
+and apply various machine learning algorithms to train your application. When the current user
+enters any similar passwords, the system alerts them. While still allowing for user flexibility,
+the application should impose fundamental rules like minimum password length and complexity, avoiding
+usernames or publicly available information, using numeric and special characters, and other rules.
+To make things easier for users, the system might promote the usage of passphrases rather than
+specific passwords. Only when all test scenarios are successful should password strength testers
+mark a password as strong.
+
+Scrape 10,000 most common passwords
+
