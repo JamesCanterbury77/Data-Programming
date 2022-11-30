@@ -14,3 +14,12 @@ mark a password as strong.
 
 Scrape 10,000 most common passwords
 
+PasswordStats.strength(weak_bits=30)
+Get password strength as a number normalized to range {0 .. 1}.
+
+Normalization is done in the following fashion:
+
+If entropy_bits <= weak_bits -- linear in range{0.0 .. 0.33} (weak)
+If entropy_bits <= weak_bits*2 -- almost linear in range{0.33 .. 0.66} (medium)
+If entropy_bits > weak_bits*3 -- asymptotic towards 1.0 (strong)
+

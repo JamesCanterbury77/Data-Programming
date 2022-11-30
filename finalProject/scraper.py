@@ -11,12 +11,12 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
 
 # Driver setup
-chrome_options = Options()
-chrome_options.add_argument('--headless')
-service = Service(executable_path="./chromedriver")
-driver = webdriver.Chrome(service=service, options=chrome_options)
+# chrome_options = Options()
+# chrome_options.add_argument('--headless')
+driver = webdriver.Chrome()
 
 user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36'
 robots = 'https://en.wikipedia.org/robots.txt'
@@ -35,12 +35,12 @@ if fetched:
     title = driver.title
     print(title)
 
-    # data = [
-    #    {'url': url}, {'title': title}, {'venue': venue}, {'date': date}, {'event_type': event_type}
-    #]
-    #with open('data.jl', 'a') as file:
-    #    json.dump(data, file)
-    #    file.write('\n')
+    data = [
+        {'url': url}, {'title': title}
+    ]
+    with open('data.jl', 'a') as file:
+        json.dump(data, file)
+        file.write('\n')
 
 
 driver.quit()
