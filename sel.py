@@ -25,7 +25,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 # Driver setup
 firefox_options = Options()
 firefox_options.add_argument('--headless')
-service = Service(executable_path="./bin/geckodriver")
+service = Service(executable_path="bin/geckodriver")
 driver = webdriver.Firefox(service=service, options=firefox_options)
 # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 

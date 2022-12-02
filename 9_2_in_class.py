@@ -1,5 +1,5 @@
 import re
-import r
+import requests
 from bs4 import BeautifulSoup
 from protego import Protego
 import json

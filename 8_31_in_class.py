@@ -1,4 +1,4 @@
-import r
+import requests
 from bs4 import BeautifulSoup
 from protego import Protego
 trope = 'https://tvtropes.org/pmwiki/pmwiki.php/Main/TheAllegedComputer'

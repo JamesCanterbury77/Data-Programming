@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.pipeline import make_pipeline
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
@@ -32,7 +32,7 @@ def main():
     scores = []
     models = []
 
-    model = make_pipeline(TfidfVectorizer(), KNeighborsClassifier())
+    model = make_pipeline(CountVectorizer(), KNeighborsClassifier())
     param_grid = {
         "kneighborsclassifier__n_neighbors": createList(1, 20)
     }
@@ -42,7 +42,7 @@ def main():
     scores.append(KN_cv.best_score_)
     models.append(KN_cv.best_estimator_)
 
-    model = make_pipeline(TfidfVectorizer(), LogisticRegression())
+    model = make_pipeline(CountVectorizer(), LogisticRegression())
     param_grid = {
         'logisticregression__random_state': [0],
         'logisticregression__penalty': ['l2', 'none']
@@ -53,7 +53,7 @@ def main():
     scores.append(LR_cv.best_score_)
     models.append(LR_cv.best_estimator_)
 
-    model = make_pipeline(TfidfVectorizer(), SVC())
+    model = make_pipeline(CountVectorizer(), SVC())
     param_grid = {
         'svc__random_state': [0],
         'svc__kernel': ['linear', 'rbf', 'poly', 'sigmoid']
@@ -64,7 +64,7 @@ def main():
     scores.append(SVC_cv.best_score_)
     models.append(SVC_cv.best_estimator_)
 
-    model = make_pipeline(TfidfVectorizer(), DecisionTreeClassifier())
+    model = make_pipeline(CountVectorizer(), DecisionTreeClassifier())
     param_grid = {
         'decisiontreeclassifier__criterion': ['gini', 'entropy'],
         'decisiontreeclassifier__random_state': [0]
@@ -75,7 +75,7 @@ def main():
     scores.append(DT_cv.best_score_)
     models.append(DT_cv.best_estimator_)
 
-    model = make_pipeline(TfidfVectorizer(), RandomForestClassifier())
+    model = make_pipeline(CountVectorizer(), RandomForestClassifier())
     param_grid = {
         'randomforestclassifier__criterion': ['gini', 'entropy'],
         'randomforestclassifier__max_depth': createList(1, 10),
@@ -88,7 +88,7 @@ def main():
     models.append(RF_cv.best_estimator_)
 
     model = make_pipeline(GaussianNB())
-    vec = TfidfVectorizer()
+    vec = CountVectorizer()
     X = vec.fit_transform(train_messages)
     df2 = pd.DataFrame(X.toarray(), columns=vec.get_feature_names_out())
     all_features = df2.shape[1]
@@ -104,7 +104,7 @@ def main():
     scores.append(CNB_cv.best_score_)
     models.append(CNB_cv.best_estimator_)
 
-    model = make_pipeline(TfidfVectorizer(), MultinomialNB())
+    model = make_pipeline(CountVectorizer(), MultinomialNB())
     param_grid = {
         'multinomialnb__alpha': [.1, .2, .3, .4, .5, .6, .7, .8, .9, 1]
     }
