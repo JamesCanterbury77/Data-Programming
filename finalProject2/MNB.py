@@ -4,7 +4,6 @@ from sklearn.naive_bayes import MultinomialNB
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import make_pipeline
-from sklearn.decomposition import TruncatedSVD
 import string
 
 

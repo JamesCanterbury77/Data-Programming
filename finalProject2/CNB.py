@@ -24,7 +24,6 @@ def main():
     df['message'] = df['message'].apply(clean)
     train_messages = df['message'].to_list()
 
-    # Train_test_split
     X1, X2, y1, y2 = train_test_split(train_messages, df['Coding:Level1'], random_state=0, train_size=0.7)
 
     params = []

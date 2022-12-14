@@ -5,15 +5,18 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import make_pipeline
 from sklearn.decomposition import TruncatedSVD
+import string
 
 
 def createList(x, y):
     return [item for item in range(x, y + 1)]
 
+
 def clean(row):
-    translator = str.maketrans('','', string.punctuation)
+    translator = str.maketrans('', '', string.punctuation)
     row = row.translate(translator)
     return row
+
 
 def main():
     df = pd.read_csv('roatan_train.csv')

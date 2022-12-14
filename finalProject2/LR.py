@@ -25,18 +25,17 @@ def main():
     df['message'] = df['message'].apply(clean)
     train_messages = df['message'].to_list()
 
-    # Train_test_split
     X1, X2, y1, y2 = train_test_split(train_messages, df['Coding:Level1'], random_state=0, train_size=0.7)
 
     params = []
     scores = []
     models = []
 
-    model = make_pipeline(TfidfVectorizer(), LogisticRegression())
+    model = make_pipeline(TfidfVectorizer(), TruncatedSVD(), LogisticRegression())
     param_grid = {
-        #'truncatedsvd__n_components': [150, 200, 250, 300],
-        #'truncatedsvd__n_iter': [10, 15, 20, 25],
-        #'truncatedsvd__random_state': [0],
+        'truncatedsvd__n_components': [150, 200, 250, 300],
+        'truncatedsvd__n_iter': [10, 15, 20, 25],
+        'truncatedsvd__random_state': [0],
         'logisticregression__random_state': [0],
         'logisticregression__max_iter': [200],
         'logisticregression__penalty': ['l2', None],

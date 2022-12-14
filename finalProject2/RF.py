@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import make_pipeline
 from sklearn.decomposition import TruncatedSVD
+import string
 
 
 def createList(x, y):
@@ -12,9 +13,10 @@ def createList(x, y):
 
 
 def clean(row):
-    translator = str.maketrans('','', string.punctuation)
+    translator = str.maketrans('', '', string.punctuation)
     row = row.translate(translator)
     return row
+
 
 def main():
     df = pd.read_csv('roatan_train.csv')
@@ -23,7 +25,6 @@ def main():
     df['message'] = df['message'].apply(clean)
     train_messages = df['message'].to_list()
 
-    # Train_test_split
     X1, X2, y1, y2 = train_test_split(train_messages, df['Coding:Level1'], random_state=0, train_size=0.7)
 
     params = []
