@@ -1,0 +1,51 @@
+Model Type: KN - 5 folds
+Highest cross validation score for KN is: 0.6501237859455342
+KN parameters used to get best results:
+{'kneighborsclassifier__n_jobs': -1, 'kneighborsclassifier__n_neighbors': 10, 'truncatedsvd__n_components': 300, 't
+runcatedsvd__n_iter': 30, 'truncatedsvd__random_state': 0}
+Test set accuracy for KN is: 0.6052631578947368
+
+Model Type: DT - 5 folds
+Highest cross validation score for DT is: 0.5643179077001206
+DT parameters used to get best results:
+{'decisiontreeclassifier__criterion': 'gini', 'decisiontreeclassifier__max_depth': 13, 'decisiontreeclassifier__ran
+dom_state': 0, 'truncatedsvd__n_components': 50, 'truncatedsvd__n_iter': 25, 'truncatedsvd__random_state': 0}
+Test set accuracy for DT is: 0.5973684210526315
+
+Model Type: RF - 5 folds
+Highest cross validation score for RF is: 0.6602678854821303
+RF parameters used to get best results:
+{'randomforestclassifier__criterion': 'entropy', 'randomforestclassifier__max_depth': 17, 'randomforestclassifier__
+n_jobs': -1, 'randomforestclassifier__random_state': 0, 'truncatedsvd__n_components': 15, 'truncatedsvd__n_iter': 2
+5, 'truncatedsvd__random_state': 0}
+Test set accuracy for RF is: 0.6210526315789474
+
+NOTE: DID NOT HAVE DIMENSIONALITY REDUCTION - ValueError: Negative values in data passed to ComplementNB (input X)
+Model Type: ComplementNB - 5 folds
+Highest cross validation score for ComplementNB is: 0.6670285025074589
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 0.8, 'complementnb__fit_prior': True, 'complementnb__norm': False}
+Test set accuracy for ComplementNB is: 0.6526315789473685
+
+Model Type: LR - 5 folds
+Highest cross validation score for LR is: 0.6602615374849234
+LR parameters used to get best results:
+{'logisticregression__C': 1, 'logisticregression__dual': False, 'logisticregression__fit_intercept': True, 'logisti
+cregression__max_iter': 300, 'logisticregression__n_jobs': -1, 'logisticregression__penalty': 'l2', 'logisticregres
+sion__random_state': 0, 'truncatedsvd__n_components': 100, 'truncatedsvd__n_iter': 15, 'truncatedsvd__random_state'
+: 0}
+Test set accuracy for LR is: 0.6210526315789474
+
+NOTE: DID NOT HAVE DIMENSIONALITY REDUCTION - ValueError: Negative values in data passed to MultinomialNB (input X)
+Model Type: MultinomialNB - 5 folds
+Highest cross validation score for MultinomialNB is: 0.6715292325271377
+MultinomialNB parameters used to get best results:
+{'multinomialnb__alpha': 0.3, 'multinomialnb__fit_prior': False}
+Test set accuracy for MultinomialNB is: 0.6684210526315789
+
+Model Type: SVC - 5 folds
+Highest cross validation score for SVC is: 0.6895892845807148
+SVC parameters used to get best results:
+{'svc__kernel': 'rbf', 'svc__random_state': 0, 'truncatedsvd__n_components': 300, 'truncatedsvd__n_iter': 20, 'trun
+catedsvd__random_state': 0}
+Test set accuracy for SVC is: 0.6657894736842105

@@ -1,0 +1,77 @@
+Did not continue working with MNB, LR
+
+------------------------------------------------------------------------------------------------------------------------
+
+NOTE: DID NOT HAVE DIMENSIONALITY REDUCTION - ValueError: Negative values in data passed to ComplementNB (input X)
+Model Type: ComplementNB  - 5 folds
+Highest cross validation score for ComplementNB is: 0.6613851329905416
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 0.3, 'complementnb__fit_prior': True, 'complementnb__norm': True}
+Test set accuracy for ComplementNB is: 0.6552631578947369
+
+Model Type: ComplementNB - 10 folds
+Highest cross validation score for ComplementNB is: 0.6613508682328907
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 0.5, 'complementnb__fit_prior': True, 'complementnb__norm': False}
+Test set accuracy for ComplementNB is: 0.6736842105263158
+
+Model Type: ComplementNB - 5 folds using CountVectorizer
+Highest cross validation score for ComplementNB is: 0.6534691804735606
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 1, 'complementnb__fit_prior': True, 'complementnb__norm': False}
+Test set accuracy for ComplementNB is: 0.631578947368421
+
+Model Type: ComplementNB - 10 folds using CountVectorizer
+Highest cross validation score for ComplementNB is: 0.6523621041879469
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 1, 'complementnb__fit_prior': True, 'complementnb__norm': True}
+Test set accuracy for ComplementNB is: 0.6263157894736842
+
+Model Type: ComplementNB - 5 folds added ngram_range, TfidfVectorizer
+Highest cross validation score for ComplementNB is: 0.6659302989906685
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 0.3, 'complementnb__fit_prior': True, 'complementnb__norm': False, 'tfidfvectorizer__ngram_range': (1, 2)}
+Test set accuracy for ComplementNB is: 0.6552631578947369
+
+Model Type: ComplementNB - 10 folds added ngram_range, TfidfVectorizer
+Highest cross validation score for ComplementNB is: 0.6681307456588357
+ComplementNB parameters used to get best results:
+{'complementnb__alpha': 0.3, 'complementnb__fit_prior': True, 'complementnb__norm': False, 'tfidfvectorizer__ngram_range': (1, 2)}
+Test set accuracy for ComplementNB is: 0.6552631578947369
+
+------------------------------------------------------------------------------------------------------------------------
+
+Model Type: SVC - 5 folds
+Highest cross validation score for SVC is: 0.6816796800609408
+SVC parameters used to get best results:
+{'svc__C': 1, 'svc__kernel': 'rbf', 'svc__random_state': 0, 'truncatedsvd__n_components': 200, 'truncatedsvd__n_iter': 25, '
+truncatedsvd__random_state': 0}
+Test set accuracy for SVC is: 0.6842105263157895
+
+Model Type: SVC - 10 folds
+Highest cross validation score for SVC is: 0.688432073544433
+SVC parameters used to get best results:
+{'svc__C': 1, 'svc__kernel': 'rbf', 'svc__random_state': 0, 'svc__shrinking': True, 'truncatedsvd__n_components': 3
+25, 'truncatedsvd__n_iter': 25, 'truncatedsvd__random_state': 0}
+Test set accuracy for SVC is: 0.6684210526315789
+
+Model Type: SVC - 5 folds using CountVectorizer
+Highest cross validation score for SVC is: 0.6500730019678792
+SVC parameters used to get best results:
+{'svc__C': 0.3, 'svc__kernel': 'linear', 'svc__random_state': 0, 'svc__shrinking': True, 'truncatedsvd__n_components': 300, 'truncatedsvd__n_iter': 10, 'truncatedsvd__random_state': 0}
+Test set accuracy for SVC is: 0.6684210526315789
+
+Model Type: SVC - 10 folds using CountVectorizer
+Highest cross validation score for SVC is: 0.6444330949948928
+SVC parameters used to get best results:
+{'svc__C': 0.3, 'svc__kernel': 'linear', 'svc__random_state': 0, 'svc__shrinking': True, 'truncatedsvd__n_components': 150, 'truncatedsvd__n_iter': 15, 'truncatedsvd__random_state': 0}
+Test set accuracy for SVC is: 0.6105263157894737
+
+Model Type: SVC - 5 folds added ngram_range, TfidfVectorizer
+Unable to finish before presentation
+
+Model Type: SVC - 10 folds added ngram_range, TfidfVectorizer
+Highest cross validation score for SVC is: 0.6872957099080693
+SVC parameters used to get best results:
+{'svc__C': 1, 'svc__kernel': 'rbf', 'svc__random_state': 0, 'svc__shrinking': True, 'tfidfvectorizer__ngram_range': (1, 1), 'truncatedsvd__n_components': 325, 'truncatedsvd__n_iter': 20, 'truncatedsvd__random_state': 0}
+Test set accuracy for SVC is: 0.6710526315789473
