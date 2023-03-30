@@ -15,6 +15,8 @@ def main():
     print('Classification types for Coding:Level1')
     print(df['Coding:Level1'].unique())
 
+    print(df['Coding:Level1'].value_counts())
+
     print('Classification types for Coding:Level2:')
     print(df['Coding:Level2'].unique())
 
